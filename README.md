@@ -38,13 +38,13 @@ https://developer.paypal.com/docs/api/overview/
 If you intend to use ExpressCheckout, please to the following [README](https://github.com/srmklive/laravel-paypal/tree/v1.0). *v2.0* & *v3.0* uses the new rest api.
 
 ```bash
-composer require srmklive/paypal:~3.0
+composer require syliva/laravel-paypal:~3.0
 ```
 
 To use this package for Laravel 5.1 to 5.8 use the following commands
 
 ```bash
-composer require srmklive/paypal:~2.0
+composer require syliva/laravel-paypal:~2.0
 ```
 * Run the following command to publish configuration:
 
