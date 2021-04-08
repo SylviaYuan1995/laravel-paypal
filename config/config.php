@@ -18,8 +18,8 @@ return [
         'client_id'         => env('PAYPAL_LIVE_CLIENT_ID', ''),
         'client_secret'     => env('PAYPAL_LIVE_CLIENT_SECRET', ''),
         'app_id'            => '',
-        'self_merchant_id'  => env('PAYPAL_SANDBOX_SELF_MERCHANT_ID', ''),  //自己的PayPal商家号, 登陆sand.paypal.com ->账户设置->公司信息->PayPal商家号
-        'paypal_partner_attribution_id'=> env('PAYPAL_SANDBOX_PARTNER_ATTRIBUTION_ID', ''),
+        'self_merchant_id'  => env('PAYPAL_LIVE_SELF_MERCHANT_ID', ''),  //自己的PayPal商家号, 登陆sand.paypal.com ->账户设置->公司信息->PayPal商家号
+        'paypal_partner_attribution_id'=> env('PAYPAL_LIVE_PARTNER_ATTRIBUTION_ID', ''),
     ],
 
     'payment_action' => env('PAYPAL_PAYMENT_ACTION', 'Sale'), // Can only be 'Sale', 'Authorization' or 'Order'
