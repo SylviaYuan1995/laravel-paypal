@@ -5,11 +5,11 @@ namespace Srmklive\PayPal\Traits\PayPalAPI;
 
 trait Partner
 {
-    public function setPartnerHeader($merchantId, $payPalPartnerAttributionId = "")
+    public function setPartnerHeader($merchantId)
     {
         $str = '{"iss" : "' . $this->config['client_id'] . '","payer_id":"' . $merchantId . '"}';
         $this->options['headers']['PayPal-Auth-Assertion'] = base64_encode('{"alg":"none"}') . "." . base64_encode($str) . ".";
-        $this->options['headers']['PayPal-Partner-Attribution-Id'] = $payPalPartnerAttributionId;
+        $this->options['headers']['PayPal-Partner-Attribution-Id'] = $this->config['paypal_partner_attribution_id'];
     }
 
     /**

@@ -6,15 +6,20 @@
 
 return [
     'mode'    => env('PAYPAL_MODE', 'sandbox'), // Can only be 'sandbox' Or 'live'. If empty or invalid, 'live' will be used.
+
     'sandbox' => [
         'client_id'         => env('PAYPAL_SANDBOX_CLIENT_ID', ''),
         'client_secret'     => env('PAYPAL_SANDBOX_CLIENT_SECRET', ''),
         'app_id'            => 'APP-80W284485P519543T',
+        'self_merchant_id'  => env('PAYPAL_SANDBOX_SELF_MERCHANT_ID', ''),  //自己的PayPal商家号, 登陆sand.paypal.com ->账户设置->公司信息->PayPal商家号
+        'paypal_partner_attribution_id'=> env('PAYPAL_SANDBOX_PARTNER_ATTRIBUTION_ID', ''),
     ],
     'live' => [
         'client_id'         => env('PAYPAL_LIVE_CLIENT_ID', ''),
         'client_secret'     => env('PAYPAL_LIVE_CLIENT_SECRET', ''),
         'app_id'            => '',
+        'self_merchant_id'  => env('PAYPAL_SANDBOX_SELF_MERCHANT_ID', ''),  //自己的PayPal商家号, 登陆sand.paypal.com ->账户设置->公司信息->PayPal商家号
+        'paypal_partner_attribution_id'=> env('PAYPAL_SANDBOX_PARTNER_ATTRIBUTION_ID', ''),
     ],
 
     'payment_action' => env('PAYPAL_PAYMENT_ACTION', 'Sale'), // Can only be 'Sale', 'Authorization' or 'Order'
